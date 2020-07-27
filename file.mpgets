@@ -1,0 +1,12 @@
+var TsFetcher = require('m3u8_to_mpegts');
+
+TsFetcher({
+    uri: "https://playplusespn-lh.akamaihd.net/i/pp_espnbra@374460/index.m3u8",
+       cwd: "destinationDirectory",
+       preferLowQuality: true,
+   }, 
+   function(){
+        console.log("Download of chunk files complete");
+        convertTSFilesToMp4();
+   }
+);
